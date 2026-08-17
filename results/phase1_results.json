@@ -1,0 +1,60 @@
+{
+  "idle_memory": {
+    "allocated_gb": 0.0,
+    "reserved_gb": 0.0
+  },
+  "base_loaded_memory": {
+    "allocated_gb": 14.496,
+    "reserved_gb": 14.498
+  },
+  "lora_loaded_memory": {
+    "allocated_gb": 14.838,
+    "reserved_gb": 15.194
+  },
+  "outputs": [
+    {
+      "id": "termination_1",
+      "expected_category": "Termination",
+      "clause_text": "Either party may terminate this Agreement at any time without cause upon thirty (30) days written notice to the other party.",
+      "model_output": "{\n  \"clause_type\": \"Termination For Convenience That Should Be Reviewed By A Lawyer.\",\n  \"risk_level\": \"High\",\n  \"summary\": \"This clause addresses termination for convenience that should be reviewed by a lawyer. obligations between the contracting parties.\",\n  \"reason\": \"Classified as High risk based on standard legal assessment of termination for convenience that should be reviewed by a lawyer. provisions in commercial contracts.\"\n}",
+      "gen_time_s": 8.81
+    },
+    {
+      "id": "indemnification_1",
+      "expected_category": "Indemnification",
+      "clause_text": "Vendor shall indemnify, defend, and hold harmless Customer from and against any and all claims, damages, losses, and expenses, including reasonable attorneys' fees, arising out of or resulting from Vendor's breach of this Agreement, without any cap or limitation on liability.",
+      "model_output": "{\n  \"clause_type\": \"Cap On Liability That Should Be Reviewed By A Lawyer.\",\n  \"risk_level\": \"Medium\",\n  \"summary\": \"This clause addresses cap on liability that should be reviewed by a lawyer. obligations between the contracting parties.\",\n  \"reason\": \"Classified as Medium risk based on standard legal assessment of cap on liability that should be reviewed by a lawyer. provisions in commercial contracts.\"\n}",
+      "gen_time_s": 7.7
+    },
+    {
+      "id": "noncompete_1",
+      "expected_category": "Non-Compete",
+      "clause_text": "During the term of this Agreement and for a period of five (5) years thereafter, Contractor shall not, directly or indirectly, engage in any business that competes with Company anywhere in the world.",
+      "model_output": "{\n  \"clause_type\": \"Non-Compete That Should Be Reviewed By A Lawyer.\",\n  \"risk_level\": \"High\",\n  \"summary\": \"This clause addresses non-compete that should be reviewed by a lawyer. obligations between the contracting parties.\",\n  \"reason\": \"Classified as High risk based on standard legal assessment of non-compete that should be reviewed by a lawyer. provisions in commercial contracts.\"\n}",
+      "gen_time_s": 7.69
+    },
+    {
+      "id": "liability_cap_1",
+      "expected_category": "Limitation of Liability",
+      "clause_text": "In no event shall either party's aggregate liability under this Agreement exceed the total fees paid in the twelve (12) months preceding the claim.",
+      "model_output": "{\n  \"clause_type\": \"Cap On Liability That Should Be Reviewed By A Lawyer.\",\n  \"risk_level\": \"Medium\",\n  \"summary\": \"This clause addresses cap on liability that should be reviewed by a lawyer. obligations between the contracting parties.\",\n  \"reason\": \"Classified as Medium risk based on standard legal assessment of cap on liability that should be reviewed by a lawyer. provisions in commercial contracts.\"\n}",
+      "gen_time_s": 7.68
+    },
+    {
+      "id": "ip_assignment_1",
+      "expected_category": "IP Rights",
+      "clause_text": "All work product, inventions, and intellectual property created by Contractor in connection with the Services shall be the sole and exclusive property of Company, and Contractor hereby assigns all right, title, and interest therein to Company.",
+      "model_output": "{\n  \"clause_type\": \"Ip Ownership Assignment That Should Be Reviewed By A Lawyer.\",\n  \"risk_level\": \"High\",\n  \"summary\": \"This clause addresses ip ownership assignment that should be reviewed by a lawyer. obligations between the contracting parties.\",\n  \"reason\": \"Classified as High risk based on standard legal assessment of ip ownership assignment that should be reviewed by a lawyer. provisions in commercial contracts.\"\n}",
+      "gen_time_s": 7.62
+    },
+    {
+      "id": "auto_renewal_1",
+      "expected_category": "Auto-Renewal",
+      "clause_text": "This Agreement shall automatically renew for successive one-year terms unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+      "model_output": "{\n  \"clause_type\": \"Notice Period To Terminate Renewal That Should Be Reviewed By A Lawyer.\",\n  \"risk_level\": \"Low\",\n  \"summary\": \"This clause addresses notice period to terminate renewal that should be reviewed by a lawyer. obligations between the contracting parties.\",\n  \"reason\": \"Classified as Low risk based on standard legal assessment of notice period to terminate renewal that should be reviewed by a lawyer. provisions in commercial contracts.\"\n}",
+      "gen_time_s": 8.54
+    }
+  ],
+  "base_load_time_s": 106.98,
+  "lora_load_time_s": 1.68
+}
