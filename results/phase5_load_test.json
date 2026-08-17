@@ -1,0 +1,46 @@
+{
+  "sequential": {
+    "n_requests": 12,
+    "n_ok": 12,
+    "latency_s": {
+      "median": 6.9971,
+      "p90": 7.6067,
+      "mean": 7.087,
+      "stdev": 0.2857
+    }
+  },
+  "concurrency_sweep": [
+    {
+      "concurrency": 1,
+      "n_requests": 16,
+      "n_ok": 16,
+      "wall_time_s": 113.5424,
+      "throughput_req_per_s": 0.1409,
+      "per_request_latency_s": {"median": 6.957, "mean": 7.0962, "max": 7.9211}
+    },
+    {
+      "concurrency": 4,
+      "n_requests": 16,
+      "n_ok": 16,
+      "wall_time_s": 28.1472,
+      "throughput_req_per_s": 0.5684,
+      "per_request_latency_s": {"median": 6.6614, "mean": 6.7775, "max": 7.3048}
+    },
+    {
+      "concurrency": 8,
+      "n_requests": 16,
+      "n_ok": 16,
+      "wall_time_s": 13.9532,
+      "throughput_req_per_s": 1.1467,
+      "per_request_latency_s": {"median": 6.6474, "mean": 6.7259, "max": 7.3517}
+    },
+    {
+      "concurrency": 16,
+      "n_requests": 16,
+      "n_ok": 16,
+      "wall_time_s": 7.3465,
+      "throughput_req_per_s": 2.1779,
+      "per_request_latency_s": {"median": 6.6359, "mean": 6.7356, "max": 7.3397}
+    }
+  ]
+}
