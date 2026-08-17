@@ -1,0 +1,40 @@
+{
+  "bf16": {
+    "variant": "bf16",
+    "total_time_s": 8.2527,
+    "n_new_tokens": 103,
+    "time_per_token_ms": 80.124,
+    "weight_bytes_approx_gb": 14.4,
+    "achieved_effective_bandwidth_gb_s": 179.72,
+    "nvidia_smi_samples_during_generate": {
+      "n_samples": 58,
+      "n_errors": 0,
+      "gpu_util_pct": {"mean": 92.0, "max": 92.0, "n": 58},
+      "mem_util_pct": {"mean": 0.0, "max": 0.0, "n": 58},
+      "power_w": {"mean": 27.74, "max": 28.41, "n": 58},
+      "raw_first_sample": {
+        "t": 705019.257799635, "gpu_util_pct": "92", "mem_util_pct": "0",
+        "power_w": "27.74", "sm_clock_mhz": "2411", "mem_clock_mhz": "[N/A]", "mem_used_mib": "[N/A]"
+      }
+    }
+  },
+  "int4": {
+    "variant": "int4_nf4",
+    "total_time_s": 3.1954,
+    "n_new_tokens": 103,
+    "time_per_token_ms": 31.023,
+    "weight_bytes_approx_gb": 3.6,
+    "achieved_effective_bandwidth_gb_s": 116.04,
+    "nvidia_smi_samples_during_generate": {
+      "n_samples": 24,
+      "n_errors": 0,
+      "gpu_util_pct": {"mean": 84.58, "max": 86.0, "n": 24},
+      "mem_util_pct": {"mean": 0.0, "max": 0.0, "n": 24},
+      "power_w": {"mean": 37.22, "max": 38.06, "n": 24},
+      "raw_first_sample": {
+        "t": 705116.772934379, "gpu_util_pct": "85", "mem_util_pct": "0",
+        "power_w": "37.49", "sm_clock_mhz": "2411", "mem_clock_mhz": "[N/A]", "mem_used_mib": "[N/A]"
+      }
+    }
+  }
+}
