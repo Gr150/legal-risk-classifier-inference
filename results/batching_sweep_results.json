@@ -1,0 +1,39 @@
+{
+  "variant": "batching_sweep_bf16",
+  "status": "ok",
+  "batch_sizes": {
+    "1": {
+      "batch_latency_s": {"median": 7.9961, "mean": 7.9937, "stdev": 0.008},
+      "throughput_req_per_s": 0.1251,
+      "per_request_latency_s_equiv": 7.9961,
+      "peak_memory_gb": 29.744,
+      "correctness_rate": 1.0,
+      "n_rounds": 5
+    },
+    "4": {
+      "batch_latency_s": {"median": 9.1799, "mean": 9.1796, "stdev": 0.0019},
+      "throughput_req_per_s": 0.4357,
+      "per_request_latency_s_equiv": 9.1799,
+      "peak_memory_gb": 29.915,
+      "correctness_rate": 1.0,
+      "n_rounds": 5
+    },
+    "8": {
+      "batch_latency_s": {"median": 11.224, "mean": 11.2245, "stdev": 0.0049},
+      "throughput_req_per_s": 0.7128,
+      "per_request_latency_s_equiv": 11.224,
+      "peak_memory_gb": 30.12,
+      "correctness_rate": 1.0,
+      "n_rounds": 5
+    },
+    "16": {
+      "batch_latency_s": {"median": 13.4293, "mean": 13.4294, "stdev": 0.0028},
+      "throughput_req_per_s": 1.1914,
+      "per_request_latency_s_equiv": 13.4293,
+      "peak_memory_gb": 30.535,
+      "correctness_rate": 1.0,
+      "n_rounds": 5
+    }
+  },
+  "known_issue": "peak_memory_gb values in this sweep are likely inflated by leftover CUDA-allocator/torch.compile (dynamo) state from the torch_compile variant that ran immediately before this one in the same process (gc.collect()+empty_cache() does not clear torch._dynamo's compiled-artifact cache). Latency and throughput numbers are unaffected (monotonic, low run-to-run stdev) and are trustworthy; the absolute peak-memory figures here are not and should not be quoted as true per-batch-size memory cost."
+}

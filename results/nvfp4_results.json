@@ -1,0 +1,7 @@
+{
+  "variant": "nvfp4_torchao",
+  "status": "failed",
+  "stage": "import",
+  "error": "ImportError: cannot import name 'NVFP4InferenceConfig' from 'torchao.prototype.mx_formats' (torchao 0.18.0)",
+  "note": "NVFP4 tooling not available in this torchao build on this aarch64+Blackwell stack."
+}
