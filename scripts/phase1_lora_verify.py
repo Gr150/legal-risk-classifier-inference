@@ -43,11 +43,20 @@ HELD_OUT_CLAUSES = [
 
 
 def format_prompt(clause_text: str) -> str:
-    return (
-        "Analyze the following contract clause. Identify the clause type, "
-        "assess its risk level (Low/Medium/High), and give a one-sentence summary.\n\n"
-        f"Clause: \"{clause_text}\"\n\nAnalysis:"
-    )
+    # Matches the exact template documented in the adapter's model card
+    # (Govardhan12345/legal-risk-classifier-lora "How to Use" section).
+    return f"""<s>[INST] You are a legal risk analyst specialising in commercial contracts.
+
+Analyse the following contract clause:
+{clause_text}
+
+Respond ONLY with a valid JSON object:
+{{
+  "clause_type": "...",
+  "risk_level": "High or Medium or Low",
+  "summary": "...",
+  "reason": "..."
+}} [/INST]"""
 
 
 def gpu_mem_gb():
@@ -71,7 +80,7 @@ def main():
     t0 = time.time()
     base_model = AutoModelForCausalLM.from_pretrained(
         BASE_MODEL_ID,
-        dtype=torch.float16,
+        dtype=torch.bfloat16,
         device_map="auto",
     )
     base_load_time = time.time() - t0
@@ -96,8 +105,9 @@ def main():
         with torch.no_grad():
             out_ids = model.generate(
                 **inputs,
-                max_new_tokens=120,
-                do_sample=False,
+                max_new_tokens=300,
+                do_sample=True,
+                temperature=0.1,
                 pad_token_id=tok.eos_token_id,
             )
         gen_time = time.time() - t0
